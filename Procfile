@@ -1,1 +1,1 @@
-web: gunicorn WebDjango.wsgi --log-file -
+web: gunicorn tothestars.wsgi --log-file -
