@@ -1,6 +1,3 @@
-import json
-from audioop import reverse
-
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 
@@ -10,7 +7,7 @@ from core.models import Kite
 
 
 def index(request):
-    kites = Kite.objects.all()
+    kites = Kite.objects.all().order_by("-pk")
     if request.method == 'POST':
         form = KiteForm(request.POST)
         if form.is_valid():
