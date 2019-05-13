@@ -19,7 +19,7 @@ def index(request):
             body = form.cleaned_data['body']
             p = Kite(title=title, name=name, body=body)
             p.save()
-            return render(request, 'index.html', context={'kites': kites, 'form': form})
+            return HttpResponseRedirect('/')
     else:
         form = KiteForm()
         return render(request, 'index.html', context={'kites': kites, 'form': form})
