@@ -6,4 +6,4 @@ from django.db import models
 class Kite(models.Model):
     title = models.CharField(max_length=255)
     name = models.CharField(max_length=255)
-    body = models.TextField()
+    body = models.CharField(max_length=255)
